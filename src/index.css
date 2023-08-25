@@ -1,13 +1,174 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body,
+button,
+input,
+textarea,
+.Toastify__toast {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+body {
+    font-size: 14px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    height: 35px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn-success {
+    background-color: green;
+}
+
+.btn-danger {
+    background-color: red;
+}
+
+.btn-info {
+    background-color: lightskyblue;
+}
+
+.container {
+    width: 600px;
+    margin: 100px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td,
+table th {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+table th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    background-color: #3c3c3c;
+    color: white;
+}
+
+table .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.mb-3 {
+    margin-bottom: 12px;
+}
+
+.modal-overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, .7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.modal .modal-header {
+    padding: 10px 15px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 17px;
+}
+
+.modal .modal-header .close-button {
+    border-radius: 50%;
+    background-color: #eee;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    line-height: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid lightgray;
+}
+
+.modal .modal-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal .modal-body input {
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    outline: none;
+    box-shadow: none;
+    margin-bottom: 15px;
+    border: 1px solid lightgray;
+}
+
+.modal .modal-body textarea {
+    resize: none;
+    border: 1px solid lightgray;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    box-shadow: none;
+    background-color: #f9f9f9;
+}
+
+.modal .modal-body button {
+    width: max-content;
+    padding: 0 15px;
 }
